@@ -1,74 +1,88 @@
-<h1 align="center"> MoviesAPI </h1>
+## MoviesAPI 
+
+<h3>🎥🎬🎞️</h3>
 
 Creating an API using C#, .NET, Entity Framework, and LINQ
 
-Developed a robust and scalable API using C# and .NET. Leveraged Entity Framework for efficient database interactions and LINQ for sophisticated data queries. The API supports CRUD operations, authentication, and authorization. Implemented best practices in API development, including clean architecture, proper error handling, and comprehensive testing. Integrated Swagger for API documentation and Azure for cloud deployment.
+MoviesAPI is a RESTful API for managing movies and their details. It allows users to perform CRUD in the following data:
++ Movie
++ Cinema
++ Address
++ Session
 
 Features
-Create, read, update, and delete movie records.
-Search for movies by title, genre, or director.
+Create, read, update, and delete records.
 Pagination support for retrieving large sets of data.
 Input validation to ensure data integrity.
 Error handling with detailed responses.
-Getting Started
-Prerequisites
+
+## Prerequisites
 Before you begin, ensure you have met the following requirements:
 
-.NET SDK installed.
-An IDE or text editor such as Visual Studio or Visual Studio Code.
-A database server (e.g., SQL Server or SQLite) to store the movie data.
-Installation
-Clone the repository:
++ .NET SDK installed.
++ An IDE or text editor such as Visual Studio or Visual Studio Code.
++ A database server (e.g., SQL Server or SQLite) to store the movie data.
 
-bash
-Copiar código
-git clone https://github.com/landowat/MoviesAPI.git
-Navigate to the project directory:
+## Installation
+1. Clone the repository:
 
-bash
-Copiar código
-cd MoviesAPI
-Restore the dependencies:
+   **git clone https://github.com/landowat/MoviesAPI.git**
 
-bash
-Copiar código
-dotnet restore
-Configure the database connection string in the appsettings.json file.
+2. Navigate to the project directory:
 
-Apply the database migrations:
+    **cd MoviesAPI**
 
-bash
-Copiar código
-dotnet ef database update
-Run the application:
+3. Restore the dependencies:
 
-bash
-Copiar código
-dotnet run
-Usage
-After running the application, you can access the API at https://localhost:5001/api/movies (adjust the URL as per your configuration).
+    **dotnet restore**
 
-Endpoints
-GET /api/movies - Retrieve all movies.
-GET /api/movies/{id} - Retrieve a specific movie by ID.
-POST /api/movies - Add a new movie.
-PUT /api/movies/{id} - Update an existing movie by ID.
-DELETE /api/movies/{id} - Delete a movie by ID.
+4. Apply the database migrations:
 
-Examples
-Get All Movies
-bash
-Copiar código
-curl -X GET https://localhost:5001/api/movies
-Add a New Movie
-bash
-Copiar código
-curl -X POST https://localhost:5001/api/movies -H "Content-Type: application/json" -d '{"title":"Inception","director":"Christopher Nolan","genre":"Science Fiction","releaseYear":2010}'
-Testing
+    **dotnet ef database update**
+
+5. Run the application:
+
+    **dotnet run**
+
+## Endpoints
+### Movies
++ GET **/api/movies** - Retrieve all movies.
++ GET **/api/movies/{id}** - Retrieve a specific movie by ID.
++ POST **/api/movies** - Add a new movie.
++ PUT **/api/movies/{id}** - Update an existing movie by ID.
++ DELETE **/api/movies/{id}** - Delete a movie by ID.
+
+### Cinemas
++ GET **/api/cinema** - Retrieve all cinemas.
++ GET **/api/cinema/{id}** - Retrieve a specific cinema by ID.
++ POST **/api/cinema** - Add a new cinema.
++ PUT **/api/cinema/{id}** - Update an existing cinema by ID.
++ DELETE **/api/cinema/{id}** - Delete a cinema by ID.
+
+### Addresses
++ GET **/api/address** - Retrieve all addresses.
++ GET **/api/address/{id}** - Retrieve a specific address by ID.
++ POST **/api/address** - Add a new address.
++ PUT **/api/address/{id}** - Update an existing address by ID.
++ DELETE **/api/address/{id}** - Delete a address by ID.
+
+### Sessions
++ GET **/api/session** - Retrieve all sessions.
++ GET **/api/session/{id}** - Retrieve a specific session by ID.
++ POST **/api/session** - Add a new session.
++ PUT **/api/session/{id}** - Update an existing session by ID.
++ DELETE **/api/session/{id}** - Delete a session by ID.
+
+## Examples
+### Get All Movies
+**curl -X GET https://localhost:5001/api/movies**
+
+### Add a New Movie
+**curl -X POST https://localhost:5001/api/movies -H "Content-Type: application/json" -d '{"title":"Rush Hour","genre":"Action","duration": 160}'**
+
+## Testing
 You can run the tests using the following command:
-
-bash
-Copiar código
 dotnet test
-Contributing
+
+## Contributing
 Contributions are welcome! Please fork this repository, create a feature branch, and submit a pull request for review.
