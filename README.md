@@ -1,6 +1,4 @@
-MoviesAPI
-
-
+<h1 align="center"> MoviesAPI </h1>
 
 MoviesAPI is a RESTful API for managing movies and their details. It allows users to perform CRUD operations on movie data, including information such as title, director, genre, and release year.
 
