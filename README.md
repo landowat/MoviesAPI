@@ -1,6 +1,10 @@
 <h1 align="center"> MoviesAPI </h1>
 
-MoviesAPI is a RESTful API for managing movies and their details. It allows users to perform CRUD operations on movie data, including information such as title, director, genre, and release year.
+#
+
+Creating an API using C#, .NET, Entity Framework, and LINQ
+
+Developed a robust and scalable API using C# and .NET. Leveraged Entity Framework for efficient database interactions and LINQ for sophisticated data queries. The API supports CRUD operations, authentication, and authorization. Implemented best practices in API development, including clean architecture, proper error handling, and comprehensive testing. Integrated Swagger for API documentation and Azure for cloud deployment.
 
 Features
 Create, read, update, and delete movie records.
